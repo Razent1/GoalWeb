@@ -1,14 +1,4 @@
-//@media screen and (max-width: 1200px)
-//  font-size: 18px
-//@media screen and (max-width: 1200px)
-//  //padding-left: 160px
-//  max-width: 620px
-//@media screen and (max-width: 1200px)
-//  display: inline
-//  //float: left
-//  margin-left: 10px
-//  margin-right: 10px
-//  width: 100%
+
 $roboto: 'Roboto' Medium, sans-serif
 
 @media screen and (min-width: 1200px)
@@ -21,13 +11,12 @@ $roboto: 'Roboto' Medium, sans-serif
     margin:
       right: 5px
       left: 5px
+  .main-header
+    margin-right: 10px
   .title
     font-size: 22px
   .conditions
     margin-left: 0
-//@media screen and (max-width: 1200px)
-//  .conditions
-//    margin-left: 50px
 
 html body
   overflow-x: hidden
@@ -44,17 +33,19 @@ main
   font-stretch: inherit
 
 .header
+  font-size: 24px
   margin:
+    bottom: 70px
+    top: 50px
     //right: 50px
     //left: 50px
 .mCol
   max-width: 800px
+.pCol
+  max-width: 1400px
 
 .last-element
   padding-bottom: 40px
-
-//.info-block
-//  padding-bottom: 50px
 
 .text2
   max-width: 760px
@@ -104,11 +95,11 @@ main
   width: 30px
   height: 30px
 
-a
+.link
   color: blueviolet
   text-decoration: none
   &:hover
-    color: pink
+    color: black
 
 .contacts
   img
@@ -122,3 +113,7 @@ a
   //margin: auto
 .cursor
   cursor: pointer
+.link-header
+  color: black
+  &:hover
+    color: black

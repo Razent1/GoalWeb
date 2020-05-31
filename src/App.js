@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import './style.sass';
 import './App.css';
+
 import img from './img/noroot (1).png';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faStar} from '@fortawesome/free-solid-svg-icons';
@@ -12,6 +13,10 @@ import telegramIcon from './img/icons8-телеграмма-app.svg';
 import gmailIcon from './img/icons8-gmail.svg';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import Main from "./Main";
+import Presentation from "./Presentation";
+import {BrowserRouter as Router, Route} from "react-router-dom";
+import {Link} from "react-router-dom";
 
 AOS.init();
 
@@ -22,149 +27,25 @@ function App() {
     const starDavide = <FontAwesomeIcon icon={faStarOfDavid} size="lg"/>;
     // const headerPoint = <div className='row point'></div>;
     const [point, setPoint] = useState(true);
-    const styleLine = {textDecoration: 'underline'};
+    const styleLine = {fontWeight: 'bold'};
     return (
         <main className='container'>
             <div className='row justify-content-center'>
-                <div className="col mCol ">
-                    <div className="row header justify-content-center">
-                        <div className='col-6 cursor'>
-                            <div onClick={() => setPoint(!point)} style={point ? styleLine : {textDecoration: "none"}}>Главная
-                            </div>
-                        </div>
-                        <div>Презетация</div>
-                    </div>
-                    <div className="row justify-content-center"><img src={img} alt=""/></div>
-                    <section className='info-block'>
-                        <div className="row title-main justify-content-center">Привет!</div>
-                        <div className="row text last-element justify-content-center">Если ты читаешь этот текст, то мы
-                            уверены, что
-                            ты —
-                            очень
-                            крутой профессионал в своей области. Это значит, что у тебя есть возможность принять участие
-                            в
-                            интереснейшем проекте! Расскажем обо всём по порядку.
-                        </div>
-                    </section>
-                    <section className='info-block'>
-                        <div className='title'>О каком проекте идёт речь?</div>
-                        <div className="row text justify-content-center"><span
-                            style={{fontWeight: 'bold'}}>Суть проекта</span> заключается в создании площадки,
-                            на которой люди смогут ставить перед собой цели и достигать их, а также помогать другим
-                            людям с их целями и учиться друг у друга. Кроме того, мы хотим раз и навсегда решить
-                            проблему с «выгоранием» и утратой мотивации.
 
-                            <div className="row text justify-content-center">Мы искренне верим в идею, что человек
-                                способен
-                                преодолеть почти любые преграды на пути к
-                                своей цели, а подавляющее число неудач — результат ошибки на этапе планирования. </div>
-                        </div>
-                        <div className="row text justify-content-center">
-                            <span style={{fontWeight: 'bold'}}>Почему возникают проблемы?</span> <br/>
-                            Результаты опросов показывают, что большая часть людей на самом деле не умеет работать с
-                            целями. Кажется, что это довольно просто — представил себе картинку того, к чему стремишься,
-                            и пол дела уже сделано, ведь так?..
-                            В реальности история совершенно другая — люди боятся ставить перед собой цели.
-                            Это происходит по разным причинам: <br/>
-                            1. Уже есть опыт работы с целями, но всё закончилось «провалом». <br/>
-                            2. Нет чёткого понимания, как это делается, а неизвестность пугает. <br/>
-                            3. Не хватает поддержки
-                        </div>
-                        <div className="row text last-element justify-content-center"><span
-                            style={{fontWeight: 'bold'}}>Наша задача </span> — научить каждого человека ставить перед
-                            собой
-                            глобальные цели и идти к ним. Разумеется, мы не можем постучаться в дверь к каждому
-                            человеку,
-                            чтобы
-                            рассказать ему об этом. К счастью, это и не требуется. <br/>
-                            Мы можем взять на вооружение то, что сами умеем делать лучше всего — разработку
-                            интернет-приложений,
-                            их продвижение и поддержку.
-                        </div>
-                    </section>
-                    <section className='info-block'>
-                        <div className="title">Кого мы ищем?</div>
-                        <div className="row text justify-content-center"> Дизайнеры, UI/UX-инженеры.</div>
-
-                        <div className="row text last-element justify-content-center"> Разработчики, которые уже умеют
-                            программировать на Python (backend), ReactNative / Flutter
-                            (frontend) или очень хотят этому научиться.
-                        </div>
-                    </section>
-                    <section className='info-block'>
-                        <div className="title">Условия</div>
-                        <div className='row text justify-content-center'>
-                            <div className='d-flex flex-row'>
-                                <div className='d-flex flex-row align-self-start'
-                                     style={{marginRight: '40px'}}>{star}</div>
-                                <div>Обещаем, что будет интересно. Безумно интересно!</div>
+                <div className={`col ${point? 'mCol' : 'pCol'}`}>
+                    <div className="d-flex flex-row header justify-content-center">
+                        <div className={`col-${point? 7 : 5} cursor main-header`}>
+                            <div onClick={() => setPoint(true)}
+                                 style={point ? styleLine : {fontWeight: "300"}}>Главная
                             </div>
                         </div>
-                        <div className='row text justify-content-center'>
-                            <div className='d-flex flex-row'>
-                                <div className='d-flex flex-row align-self-start'
-                                     style={{marginRight: '40px'}}>
-                                    <div className='wrapper-icon'>{crown} </div>
-                                </div>
-                                <div>Обещаем, что ты получишь кайф от работы над чем-то своим.</div>
+                        <div className='cursor'>
+                            <div onClick={() => setPoint(false)}
+                                 style={point ? {fontWeight: "300"} : styleLine}>  <div>Презетация </div>
                             </div>
                         </div>
-                        <div className='row text justify-content-center'>
-                            <div className='d-flex flex-row'>
-                                <div className='flex-row align-self-start'
-                                     style={{marginRight: '40px'}}>
-                                    <div className='wrapper-icon'>{money} </div>
-                                </div>
-                                <div>Обещаем, что денег сначала не будет, а потом... возможно тоже не будет.</div>
-                            </div>
-                        </div>
-                        <div className='row text last-element justify-content-start'>
-                            <div className='d-flex flex-row'>
-                                <div className='d-flex flex-row align-self-start'
-                                     style={{marginRight: '40px', marginTop: '10px'}}>
-                                    <div
-                                        className='wrapper-icon d-flex flex-row justify-content-center'
-                                        style={{paddingLeft: '5px'}}>{starDavide} </div>
-                                </div>
-                                <div>Обещаем, что ты сможешь гордиться тем, что ты участвовал в подобном
-                                    проекте, и тебе будет, о чём рассказать на очередном собеседовании.
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                    <section className='info-block'>
-                        <div className='title'>Я в деле!</div>
-                        <div className='row text justify-content-center'>
-                            Отлично, рады слышать!
-                        </div>
-                        <div className='row text last-element justify-content-center'>
-                            Напиши <a className='link' href="#contacts">нам</a>.
-                        </div>
-                    </section>
-                    <section className='info-block'>
-                        <div className='title '>Позови друга!</div>
-                        <div className='row text justify-content-center'>
-                            Даже если тебе кажется, что у тебя не найдётся времени на то, чтобы присоединиться к
-                            проекту, ты
-                            всё равно можешь помочь.
-                        </div>
-                        <div className='row text justify-content-center'>
-                            Отправь эту ссылку другу, которому может быть интересно принять участие в проекте.
-                        </div>
-                        <div className='row text last-element justify-content-center'>
-                            Спасибо за уделённое время!
-                        </div>
-                    </section>
-                    <div className="title">Контакты</div>
-                    <div className="row text-contacts justify-content-center" style={{paddingBottom: '20px'}}>
-                        <div className='row justify-content-center contacts'><a
-                            href="https://www.instagram.com/scaletius/" target='_blank'><img
-                            src={instagramIcon}/></a> <a
-                            href="https://t.me/clopo" style={{outline: 'none'}} id='contacts' target='_blank'> <img
-                            src={telegramIcon}/> </a> <a
-                            href="mailto:skaletsky.work@gmail.com " target='_blank'><img
-                            src={gmailIcon}/></a></div>
                     </div>
+                    {point ? <Main/>: <Presentation/>}
                 </div>
             </div>
         </main>
