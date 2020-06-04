@@ -27,7 +27,8 @@ function App() {
     const starDavide = <FontAwesomeIcon icon={faStarOfDavid} size="lg"/>;
     // const headerPoint = <div className='row point'></div>;
     const [point, setPoint] = useState(true);
-    const styleLine = {fontWeight: 'bold'};
+    const styleLineMain = {fontWeight: 'bold'};
+    const styleLinePres = {fontWeight: 'bold', color: '#13CD88'};
     return (
         <main className='container'>
             <div className='row justify-content-center'>
@@ -36,12 +37,12 @@ function App() {
                     <div className="d-flex flex-row header justify-content-center">
                         <div className={`col-${point? 7 : 5} cursor main-header`}>
                             <div onClick={() => setPoint(true)}
-                                 style={point ? styleLine : {fontWeight: "300"}}>Главная
+                                 style={point ? styleLineMain : {fontWeight: "300"}}>We Are Hiring
                             </div>
                         </div>
-                        <div className='cursor'>
+                        <div className={`cursor ${point? '' : 'mobile-titles'}`}>
                             <div onClick={() => setPoint(false)}
-                                 style={point ? {fontWeight: "300"} : styleLine}>  <div>Презетация </div>
+                                 style={point ? {fontWeight: "300"} : styleLinePres}>  <div>Презетация </div>
                             </div>
                         </div>
                     </div>
