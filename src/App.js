@@ -42,7 +42,7 @@ function App() {
                         </div>
                         <div className={`cursor ${point? '' : 'mobile-titles'}`}>
                             <div onClick={() => setPoint(false)}
-                                 style={point ? {fontWeight: "300"} : styleLinePres}>  <div>Презетация </div>
+                                 style={point ? {fontWeight: "300"} : styleLinePres}>  <div>Презентация</div>
                             </div>
                         </div>
                     </div>

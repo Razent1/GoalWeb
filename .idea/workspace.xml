@@ -5,9 +5,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Presentation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Presentation.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_presentation.sass" beforeDir="false" afterPath="$PROJECT_DIR$/src/_presentation.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/style.sass" beforeDir="false" afterPath="$PROJECT_DIR$/src/style.sass" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -30,7 +27,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../narive" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -91,7 +88,20 @@
       <workItem from="1591107873658" duration="3214000" />
       <workItem from="1591123061455" duration="950000" />
       <workItem from="1591190572878" duration="9332000" />
-      <workItem from="1591275358348" duration="9581000" />
+      <workItem from="1591275358348" duration="10447000" />
+      <workItem from="1591378179091" duration="2475000" />
+      <workItem from="1591452801823" duration="599000" />
+      <workItem from="1591800249766" duration="611000" />
+      <workItem from="1592134267853" duration="10000" />
+      <workItem from="1592247210973" duration="240000" />
+      <workItem from="1592316292235" duration="666000" />
+      <workItem from="1594395153959" duration="751000" />
+      <workItem from="1595862810739" duration="601000" />
+      <workItem from="1595876473389" duration="600000" />
+      <workItem from="1596043596138" duration="548000" />
+      <workItem from="1596391362667" duration="10000" />
+      <workItem from="1596652991065" duration="339000" />
+      <workItem from="1597786907865" duration="48000" />
     </task>
     <task id="LOCAL-00001" summary="making header">
       <created>1590870195175</created>
@@ -107,7 +117,14 @@
       <option name="project" value="LOCAL" />
       <updated>1590965670843</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="final version of pres">
+      <created>1591286871887</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1591286871887</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -129,6 +146,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="making header" />
     <MESSAGE value="the first step of presentation" />
-    <option name="LAST_COMMIT_MESSAGE" value="the first step of presentation" />
+    <MESSAGE value="final version of pres" />
+    <option name="LAST_COMMIT_MESSAGE" value="final version of pres" />
   </component>
 </project>
